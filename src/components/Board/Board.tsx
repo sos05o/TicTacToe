@@ -69,11 +69,11 @@ const Board = ({ theme }: BoardProps) => {
   return (
     <div className="w-fit h-fit board p-3 grid grid-cols-3 grid-rows-[auto_repeat(4,_minmax(0,_1fr))] gap-x-0.5 gap-y-2 self-center select-none">
       <div className={"col-span-3 grid grid-cols-subgrid"}>
-        <div className={`w-20 h-20 max-sm:w-14 max-sm:h-14 col-start-1 col-end-2 border-4 rounded-[8px] border-amber-400 ${user === 1 ? 'bg-indigo-500' : 'bg-indigo-200/[0.72]'}`}></div>
+        <div className={`w-20 h-20 max-sm:w-14 max-sm:h-14 col-start-1 col-end-2 border-4 rounded-[8px] border-amber-400 ${user === 1 ? 'bg-indigo-500' : 'bg-stone-200/[0.2]'}`}></div>
         <button className={`w-20 h-20 max-sm:w-14 max-sm:h-14 max-sm:p-3 col-start-2 col-end-3 border-4 ${theme === 'light' ? 'bg-stone-50' : 'bg-stone-900'} border-amber-400 hover:border-fuchsia-500 flex items-center justify-center`} onClick={initializer}>
           <RotateCw className={"w-8 h-8 stroke-amber-500"} />
         </button>
-        <div className={`w-20 h-20 max-sm:w-14 max-sm:h-14 col-start-3 col-end-4 border-4 rounded-[8px] border-amber-400 ${user === 2 ? 'bg-rose-500' : 'bg-rose-200/[0.72]'}`}></div>
+        <div className={`w-20 h-20 max-sm:w-14 max-sm:h-14 col-start-3 col-end-4 border-4 rounded-[8px] border-amber-400 ${user === 2 ? 'bg-rose-500' : 'bg-stone-200/[0.2]'}`}></div>
       </div>
       <div className="col-span-3 row-span-3 grid grid-cols-subgrid grid-rows-3 justify-center gap-y-0.5">
         {ticTacToe.map((status, index) => (
@@ -81,11 +81,11 @@ const Board = ({ theme }: BoardProps) => {
         ))}
       </div>
       {judge() === 1 && 
-        <h1 className="col-span-3 text-4xl max-sm:text-3xl flex items-center justify-center text-stone-900">
+        <h1 className={`col-span-3 text-4xl max-sm:text-3xl flex items-center justify-center text-stone-900 ${theme === 'light' ? 'text-stone-950' : 'text-stone-50'}`}>
           <Circle className={`w-12 max-sm:w-8 h-fit stroke-indigo-500`} />の勝ち</h1>
         }
       {judge() === 2 && 
-        <h1 className="col-span-3 text-4xl max-sm:text-3xl flex items-center justify-center text-stone-900">
+        <h1 className={`col-span-3 text-4xl max-sm:text-3xl flex items-center justify-center text-stone-900 ${theme === 'light' ? 'text-stone-950' : 'text-stone-50'}`}>
           <X className={`w-12 max-sm:w-8 h-fit stroke-rose-500`} />の勝ち</h1>
       }
 

@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1dvw;
-  height: 1dvh;
+  width: 100dvw;
+  height: 100dvh;
 }
 
 .logo {

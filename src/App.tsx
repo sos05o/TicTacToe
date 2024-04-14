@@ -5,7 +5,7 @@ import { Moon, Sun } from 'react-feather'
 
 function App() {
 
-  const [theme, setTheme] = useState("light")
+  const [theme, setTheme] = useState<"light" | "dark">("light")
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light")

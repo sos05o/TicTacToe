@@ -2,7 +2,11 @@ import { useState } from "react"
 import Piece from "../Piece/Piece"
 import { Circle, RotateCw, X } from "react-feather"
 
-const Board: React.FC<"light" | "dark"> = ({theme}) => {
+interface BoardProps {
+  theme: "light" | "dark"
+}
+
+const Board = ({ theme }: BoardProps) => {
   const [record, setRecord] = useState<number[]>([])
   // 1vs1の○×ゲームを作成する
   // 3x3のマスの配列 ticTacToeを作成 それぞれに<Piece />を配置する

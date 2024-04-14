@@ -6,5 +6,4 @@
 
 ## 参考
 
-- [React+ViteをGitHub Pagesにデプロイ](https://zenn.dev/shivase/articles/009-react-vite-githubpages)
-
+- [Vite](https://ja.vitejs.dev/guide/)

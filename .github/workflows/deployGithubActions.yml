@@ -38,7 +38,7 @@ jobs:
         run: pnpm build
         env:
           GITHUB_PAGES: true
-      - Upload Artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
